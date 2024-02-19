@@ -1,0 +1,9 @@
+<div class="row">
+  <mat-form-field id="search">
+      <input matInput type="text" [(ngModel)]="term" placeholder="Search your trips here..." >
+  </mat-form-field>
+  <div class="col-md-4" *ngFor = "let trips of tripsList | filter:term" >
+      <app-product-item [tripsItem]="trips"></app-product-item>
+  </div>
+</div>
+  

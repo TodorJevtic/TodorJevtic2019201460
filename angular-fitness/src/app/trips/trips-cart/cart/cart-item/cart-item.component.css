@@ -1,0 +1,18 @@
+#minus{
+    margin-left: 5px;
+    border-color: white;
+    background-color: white;
+    border: none;
+}
+#plus{
+    margin-left: 5px;
+    border-color: white;
+    background-color: white;
+    border: none;
+}
+#close{
+    border-color: white;
+    background-color: white;
+    margin-left: 35px;
+    border: none;
+}

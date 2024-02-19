@@ -1,0 +1,37 @@
+.banner{
+    background-image: url('/assets/images/11.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 905px;
+}
+.banner h1{
+    color:aliceblue;
+    font-size: 50px;
+    font-weight: bold;
+    top:18%;
+    left: 10%;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+}
+.banner h2{
+    color:aliceblue;
+    font-size: 30px;
+    font-weight: bold;
+    top:30%;
+    left: 23%;
+    position: absolute;
+    font-family: 'Raleway', sans-serif;
+}
+.dugmici{
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    top:58%;
+    left: 18.5%;
+    position: absolute;
+}
+#myButton {
+    width: 200px;
+    font-size: 18px;
+}

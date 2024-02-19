@@ -1,0 +1,39 @@
+<section>
+    <form id="forma" fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)" fxLayoutGap="10px">
+        <mat-toolbar color="primary" fxLayoutAlign="center center">Login page</mat-toolbar>
+        <mat-form-field>
+            <input 
+                type="email" 
+                matInput 
+                placeholder="E-mail"
+                ngModel 
+                email
+                required
+                name="email"
+                #emailInput="ngModel">
+            <mat-error *ngIf="emailInput.hasError('required')">Field should not be empty</mat-error>
+            <mat-error *ngIf="!emailInput.hasError('required')">Please use the correct email format</mat-error>
+        </mat-form-field>
+        <mat-form-field hintLabel="Please enter minimum 8 characters">
+            <input 
+            type="password" 
+            matInput 
+            placeholder="Your password" 
+            ngModel 
+            name="password"
+            required
+            minlength="8"
+            #passInput="ngModel">
+            <mat-hint align="end">{{passInput.value?.length}} /8</mat-hint>
+        </mat-form-field>
+        <button 
+            type="submit" 
+            mat-raised-button 
+            color="primary"
+            [disabled]="f.invalid">Submit
+        </button>
+        <mat-label *ngIf="errorExists">{{ errorText }}</mat-label>
+        <a routerLink="/signup">Dont have account, signup here?</a>
+    </form>
+</section>
+

@@ -1,0 +1,40 @@
+
+<button mat-icon-button [mat-dialog-close]="true">
+    <mat-icon matListIcon>close</mat-icon>
+</button>
+
+<div class="container">
+    <div class="col-lg-8 border p-3 main-section bg-white">
+        <div class="row m-0">
+            <div class="col-lg-4 left-side-product-box pb-3">
+                <img [src]="imageUrl" class="border p-3">
+                <ngb-rating id="rating" [max]="5" [readonly]="true" [rate]="rating"></ngb-rating>
+            </div>
+            <div class="col-lg-8">
+                <div class="right-side-pro-detail border p-3 m-0">
+                    <div class="row">
+                        <div class="col-lg-12 pt-2">
+                            <p class="m-0 p-0" id="naziv">{{destination}}</p>
+                            <p class="m-0 p-0">{{date}}</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <p class="m-0 p-0 price-pro">{{price | currency:'EUR'}}</p>
+                            <hr class="p-0 m-0">
+                        </div>
+                        <div class="col-lg-12 pt-2">
+                            <h5>Trip Description:</h5>
+                            <span>{{description}}</span>
+                            <hr class="m-0 pt-2 mt-2">
+                        </div>
+                        <div class="col-lg-12">
+                            <p class="tag-section">Distance :<a id="status"> {{distance}}  km</a>
+                            <p class="tag-section">Type of travel :<a id="status"> {{type_of_travel}}</a>
+                            <p class="tag-section"><strong>Status : </strong><a id="status"> {{status}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

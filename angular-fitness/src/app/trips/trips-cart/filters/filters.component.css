@@ -1,0 +1,12 @@
+#dugme{
+    margin-top: 20px;
+    margin-left: 30px;
+    background-color:#3F51B5;
+    color: white;
+    border-color:#3F51B5;
+}
+#search{
+    width:190px;
+    margin-left: 4px;
+    margin-top: 10px;
+}

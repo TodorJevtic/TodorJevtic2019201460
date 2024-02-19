@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+/*bootstrap ocenjivanje*/
+@import "~bootstrap/dist/css/bootstrap.css";
+html, body{
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin:0;
+}

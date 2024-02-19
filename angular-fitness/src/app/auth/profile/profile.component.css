@@ -1,0 +1,14 @@
+mat-form-field{
+    width: 100%;
+}
+
+mat-card-subtitle {
+    margin-bottom: 1vh;
+    font-size: 0.75em;
+}
+#edit{
+    margin-left: 10px;
+}
+span{
+    margin-bottom: 3vh;
+}

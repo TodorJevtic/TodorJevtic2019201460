@@ -1,0 +1,9 @@
+<div class="cart-item">
+    <span>{{cartItem.productName}}</span> x 
+    <span>{{ cartItem.qty}}</span>: 
+    <strong>{{ (cartItem.qty * cartItem.price) | currency:'EUR' }}</strong>
+    <button id="plus" (click)="inc()" (click)="sendMessage()"><span class="material-symbols-outlined">add</span></button>
+    <button id="minus" (click)="dec()" (click)="sendMessage()" ><span class="material-symbols-outlined">remove</span></button>
+    <button id="close" (click)="deleteItem()"><span class="material-symbols-outlined">close</span></button>
+</div>
+  

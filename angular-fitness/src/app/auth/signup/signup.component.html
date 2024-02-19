@@ -1,0 +1,67 @@
+<section>
+    <form 
+        fxLayout="column" 
+        fxLayoutAlign="center center" 
+        #f="ngForm" 
+        (ngSubmit)="onSubmit(f)"
+        fxLayoutGap="10px"
+        id="forma">
+        <mat-toolbar color="primary" fxLayoutAlign="center center">Signup page</mat-toolbar>
+        <mat-form-field>
+            <input type="forename " matInput placeholder="Forename "
+            ngModel name="forename ">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="surname" matInput placeholder="Surname"
+            ngModel name="surname">
+        </mat-form-field>
+        <mat-form-field>
+            <input 
+                type="email" 
+                matInput 
+                placeholder="E-mail"
+                ngModel 
+                email
+                required
+                name="email"
+                #emailInput="ngModel">
+            <mat-error *ngIf="emailInput.hasError('required')">Field should not be empty</mat-error>
+            <mat-error *ngIf="!emailInput.hasError('required')">Please use the correct email format</mat-error>
+        </mat-form-field>
+        <mat-form-field hintLabel="Please enter minimum 8 characters">
+            <input 
+                type="password" 
+                matInput 
+                placeholder="Password" 
+                ngModel 
+                name="password"
+                required
+                minlength="8"
+                #passInput="ngModel">
+                <mat-hint align="end">{{passInput.value?.length}} /8</mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="phone" matInput placeholder="Phone number "
+            ngModel name="phone ">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="address " matInput placeholder="Address "
+            ngModel name="address ">
+        </mat-form-field>
+        <mat-checkbox 
+            color="primary"
+            ngModel
+            name="acceptance"
+            required>
+            I accept the terms of conditions of use
+        </mat-checkbox>
+        <button 
+            type="submit" 
+            mat-raised-button 
+            color="primary"
+            [disabled]="f.invalid">Submit
+        </button>
+        <mat-label *ngIf="errorExists">{{ errorText }}</mat-label>
+        <a routerLink="/login">Go back to login page.</a>
+    </form>
+</section>

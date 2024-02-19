@@ -1,0 +1,76 @@
+<mat-sidenav-container>
+
+    <!--Navigacioni meni/sidenav-->
+    <mat-sidenav #sidenav opened="false">
+        <mat-nav-list>
+            <a id="efekat" mat-list-item routerLink="/" (click)="sidenav.close()">
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+                Welcome
+            </a>
+            <a id="efekat" mat-list-item routerLink="/trips" (click)="sidenav.close()">
+                <span class="material-symbols-outlined">
+                    flight
+                </span>
+                Trips
+            </a>
+            <a id="efekat" mat-list-item routerLink="/signup" (click)="sidenav.close()">
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+                Signup
+            </a>
+            <a id="efekat" mat-list-item routerLink="/login" (click)="sidenav.close()">
+                <span class="material-symbols-outlined">
+                    login
+                </span>
+                Login
+            </a>
+            <a id="efekat" mat-list-item (click)="openProfile(this.userService.currentUser.id)" (click)="sidenav.close()">
+                <span class="material-symbols-outlined">
+                    account_circle
+                </span>
+                {{ this.userService.currentUser.surname}}
+            </a>
+            <button id="myButton2" mat-raised-button color="accent" (click)="userLogout()" (click)="sidenav.close()"><span class="material-symbols-outlined" (click)="sidenav.close()">
+                logout
+                </span>Logout</button>
+        </mat-nav-list>
+    </mat-sidenav>
+    <!-- Ruter linkovi u sidenav-contentu / iza scene  -->
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <div>
+                <button mat-mini-fab color="accent" aria-label="Example icon button with a menu icon" (click)="sidenav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <div class="naziv">
+                Sun Travel
+            </div>
+            <div fxFlex fxLayoutAlign="end" fxLayoutGap="15px">   
+                <a routerLink="/">Welcome</a>
+                <a routerLink="/trips">Trips</a>
+                <a routerLink="/signup">Signup</a>
+                <a routerLink="/login">Login</a>
+                <button id="myButton" mat-raised-button color="accent" (click)="openProfile(this.userService.currentUser.id)">{{ this.userService.currentUser.surname}}</button>
+            </div>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <footer>
+    <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a routerLink="/" class="nav-link px-2 text-white">Home</a><p ></p></li>
+            <li class="nav-item"><a routerLink="/trips" class="nav-link px-2 text-white">Trips</a></li>
+            <li class="nav-item"><a routerLink="/signup" class="nav-link px-2 text-white">Signup</a></li>
+            <li class="nav-item"><a routerLink="/login" class="nav-link px-2 text-white">Login</a></li>
+            <li class="nav-item"><a (click)="openProfile(this.userService.currentUser.id)" class="nav-link px-2 text-white">{{ this.userService.currentUser.surname}}</a></li>
+          </ul>
+          <p class="text-center text-white">&copy; 2023 Sun Travel, Doo</p>
+        </footer>
+      </div>
+  </footer>

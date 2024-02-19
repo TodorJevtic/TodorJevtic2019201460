@@ -1,0 +1,14 @@
+mat-form-field{
+    width: 300px;
+}
+#forma{
+    padding-top: 160px;
+}
+mat-toolbar{
+    width: 300px;
+}
+a{
+    color: black;
+    text-decoration: none;
+    margin-top: 25px;
+}
